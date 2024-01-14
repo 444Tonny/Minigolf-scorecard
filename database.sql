@@ -1,0 +1,5 @@
+CREATE TABLE game_results (
+  game_id INT AUTO_INCREMENT PRIMARY KEY,
+  players VARCHAR(255),
+  game_datetime DATETIME DEFAULT CURRENT_TIMESTAMP
+);

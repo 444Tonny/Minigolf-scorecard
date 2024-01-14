@@ -1,0 +1,1082 @@
+:root {
+    --darkblue: #424b5a; 
+    --darkgray: #4f595e; 
+    --lightgray: #a1aeb7; 
+    --verylightgray: #C2D1D9;
+    --red: #DF1A56;
+    --redhover: #b71948;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', Verdana, sans-serif;
+}
+
+button {
+    touch-action: manipulation;
+}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome,
+.players-numbers,
+.setup,
+.hole
+{
+    margin-top: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+.welcome
+{
+    margin-top: 15vh !important;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.welcome .big-logo
+{
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.welcome .text2,
+.players-numbers .text2,
+.setup .text2,
+.hole .text2
+{
+    font-size: 25px;
+    font-weight: 700; 
+    color: #DF1A56;
+}
+
+
+.welcome .text2
+{
+    font-size: 22px;
+    text-align: center;
+    color: #555555;
+}
+
+.welcome a.play
+{
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 40px;
+    width: 130px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 200;
+    color: white;
+    background-color: #DF1A56;
+    border: none;
+}
+
+.welcome a.play:hover,
+.welcome a.play:active
+{
+    transition: 0.2s;
+    background-color: #b71948;
+    cursor: pointer;
+}
+
+.welcome a.play b
+{
+    position: relative;
+    left: 15px;
+    font-size: 22px;
+    top: -1.5px;
+}
+
+
+
+/* -------------------------- Number of players -------------------------- */
+
+
+div.players-numbers
+{
+    margin-top: 25vh !important;
+}
+
+.players-numbers .text1,
+.setup .text1,
+.hole .text1
+{
+    margin-bottom: 0px;
+    font-size: 12px;
+    color: #555555;
+    font-weight: 700;
+}
+
+.nbChoices
+{
+    margin-top: 28px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 90vw;
+    max-width: 350px;
+}
+
+button.nbPlayer
+{
+    width: 54px;
+    min-width: 50px;
+    height: 55px;
+    border: 3px solid var(--verylightgray);
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--lightgray);
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+button.nbPlayer:hover,
+button.nbPlayer:active
+{
+    cursor: pointer;
+    transition: 0.1s;
+    border: #DF1A56 3px solid;
+    color: #DF1A56;
+}
+
+
+/* -------------------------- Players name -------------------------- */
+
+.setup
+{
+    margin-top: 7vh !important;
+}
+
+.setup .text2
+{
+    margin-bottom: 25px;
+}
+
+.setup form
+{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+.setup label
+{
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 14px;
+    color: #555555;
+}
+
+.setup label b
+{
+    font-weight: 700;
+}
+
+.setup input[type=text]
+{
+    margin-bottom: 20px;
+    height: 28px;
+    padding: 4px 10px;
+    font-weight: 700;
+    color: #707A85;
+    border: 1px solid #C2D1D9;
+    outline: #DF1A56;
+    border-radius: 2px;
+}
+
+.setup div.form-buttons,
+.hole div.form-buttons
+{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+button.go,
+.back
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 38px;
+    width: 135px;
+    font-size: 10px;
+    color: white;
+    background-color: #DF1A56;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.back
+{
+    border: #555555 1px solid;
+    color: #555555;
+    background: none;
+}
+
+.redback
+{
+    border: #DF1A56 1px solid;
+    color: #DF1A56;
+}
+
+.redback:hover,
+.redback:active
+{
+    border: #b71948 1px solid !important;
+    color: #b71948 !important; 
+}
+
+.setup button.go:hover,
+.setup button.go:active,
+.hole button.go:hover,
+.hole button.go:active
+{
+    transition: 0.2s;
+    background-color: #b71948;
+    cursor: pointer;
+}
+
+.setup a.back:hover,
+.setup a.back:active,
+.hole button.back:hover,
+.hole button.back:active
+{
+    transition: 0.2s;
+    cursor: pointer;
+    border: #404040 1px solid;
+    color: #404040;
+    background: none;
+}
+
+button.go b
+{
+    position: relative;
+    left: 15px;
+    top: -1px;
+    font-size: 18px;
+}
+
+button.back b,
+a.back b
+{
+    position: relative;
+    right: 15px;
+    top: -1px;
+    font-size: 18px;
+}
+
+
+/* -------------------------- Hole -------------------------- */
+
+
+#holePanel
+{
+    display: flex;
+    padding-bottom: 150px;
+}
+
+.hole
+{
+    margin-top: 2vh !important;
+}
+
+.hole .text1
+{
+    font-size: 10px !important;
+}
+
+.hole .text2
+{
+    margin-bottom: 10px;
+}
+
+
+
+
+
+ .board-info
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    box-shadow: 0px 8px 5px -6px rgb(219, 219, 219);
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.board-info div
+{
+    display: flex;
+    flex-direction: column;
+    color: #a1aeb7;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-top: 4px;
+}
+
+.hole-info
+{
+    width: 90px;
+    height: 65px;
+    border-right: 1px solid #DEDEDE;
+}
+
+.par-info 
+{
+    width: 65px;
+    height: 65px;
+    border-right: 1px solid #DEDEDE;
+}
+
+.hole-info p,
+.par-info p
+{
+    font-size: 11px;
+    font-weight: 500;
+    color: #555555;
+    margin: 0;
+}
+
+.hole-info,
+.par-info
+{
+    font-size: 30px;
+    font-weight: 700;
+    color: #555555 !important;
+}
+
+
+.hole-info
+{
+    color: #DF1A56 !important;
+}
+
+.wheelchair
+{
+    position: absolute;
+    left: 69px;
+    top: 89px;
+    width: 10px;
+}
+
+.sponsor
+{
+  margin-left: auto !important;
+}
+
+.sponsor_link
+{
+    color: #a1aeb7 !important;
+    text-decoration: none;
+}
+
+.board-info div.sponsor
+{
+    align-items: end;
+    padding-right: 14px;
+}
+
+.sponsor p
+{
+    margin: 2px 0px 2px 0px;
+    font-weight: 400;
+    font-size: 12px;    
+    text-align: right !important;
+    color: #555555;
+} 
+
+.sponsor span
+{
+    font-weight: 700;
+    font-size: 18px;
+    transition: transform 0.1s;
+} 
+
+.hole-form
+{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hole-form .score-incrementor
+{
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.score-incrementor label
+{
+    max-width: 155px;
+    overflow-x: hidden;
+}
+
+.hole-form label
+{
+    color: #555555;
+    font-weight: 500;
+}
+
+.hole-form .incrementor
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 135px;
+    height: 36px;
+    border: 1px solid #C2D1D9;
+}
+
+.hole-form .incrementor input[type=text]
+{
+    width: 25px;
+    text-align: center;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #DF1A56;
+    transition: transform 0.1s; 
+}
+
+.hole-form .incrementor button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 35px;
+    background: none;
+    border: none;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: #C2D1D9;
+    text-align: center;
+}
+
+.hole-form .incrementor button:hover,
+.hole-form .incrementor button:active
+{
+    cursor: pointer;
+    color: #8d989e;
+}
+
+.hole button.go b
+{
+    left: 9px !important;
+}
+
+/* -------------------------- SCORECARD -------------------------- */
+
+div.scorecard
+{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 1px 1px rgb(188, 188, 188);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    max-height: 115px;
+    overflow-y: hidden;
+    transition: top 0.5s;
+    z-index: 10;
+}
+
+/* Add the CSS animation for smooth upward movement */
+@keyframes moveToTop {
+from {
+    max-height: 115px;
+    overflow-y: hidden;
+}
+to {
+    max-height: 90vh;
+    overflow-y: auto;
+    }
+}
+
+@keyframes moveToBottom {
+    from {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    to {
+        max-height: 115px;
+        overflow-y: hidden;
+        }
+    }
+
+/* Apply the animation to the scorecard */
+.move-to-top {
+    animation: moveToTop 0.5s forwards;
+}
+
+/* Apply the animation to the scorecard */
+.move-to-bottom {
+    animation: moveToBottom 0.5s forwards;
+}
+
+div.scorecard .top
+{
+    padding-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    color: #A1AEB7;
+    height: auto;
+    border-bottom: 3px solid #DF1A56;
+}
+
+div.scorecard .top p
+{
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 6px;
+    margin-bottom: 5px;
+    color: #DF1A56;
+}
+
+div.scorecard .top button
+{
+    padding-right: 8%;
+    background: none;
+    border: none;
+    height: 20px;
+    width: 50%;
+    text-align: right;
+    color: #949fa7;
+    font-weight: 500;
+    font-size: 9px;
+    display: flex;
+    flex-direction: row;
+    align-content: end;
+    align-items: center;
+    justify-content: end;
+    text-align: right;
+}
+
+div.scorecard .top button b
+{
+    font-weight: 500 !important;
+    font-size: 28px !important;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    display: inline-block;
+    /* Réglez le point d'origine de la transformation pour que l'élément tourne autour de son coin supérieur gauche */
+    transform-origin: top left;
+    position: relative;
+    top: 12px;
+    right: -39px;
+    font-size: 25px;
+    color: #DF1A56;
+}
+
+div.scorecard .top button:hover,
+div.scorecard .top button:active
+{
+    transition: 0.1s;
+    cursor: pointer;
+    color: #5f686e;
+}
+
+
+.scorecard .current-scorecard
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Player totals summamry */
+
+.total-scores
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 25px;
+    padding-top: 13px;
+}
+
+.total-player
+{
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.total-player .tdname
+{
+    color: #A1AEB7;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.total-player .sumScore
+{
+    color: #555555;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Player score table */
+
+div.player-table 
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.player-table span.name
+{
+    display: flex;
+    align-self: center;
+    width: 90%;
+    max-width: 410px;
+    padding-bottom: 9px;
+    color: #555555;
+    font-weight: 500;
+}
+
+div.player-table table
+{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 90%;
+    max-width: 410px;
+    color: #A1AEB7;
+    border-top: 1px solid #A1AEB7;
+    border-bottom: 1px solid #A1AEB7;
+    border-collapse: collapse;
+}
+
+
+div.player-table table tr.thead td
+{
+    min-width: 23px;
+    padding-top: 5px;
+    font-size: 10px;
+    text-align: center;
+}
+
+div.player-table table tr.values td
+{
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #555555;
+}
+
+
+div.player-table table tr.values td.oneShot
+{
+    color: #DF1A56
+}
+
+div.player-table table tr td.in-out
+{
+    min-width: 38px;
+    border-left: #A1AEB7 1px solid;
+    border-right: #A1AEB7 1px solid;
+}
+
+div.player-table table tr td.total
+{
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 13px;
+    width: 55px;
+    position: relative;
+    top: 25px;
+    text-align: left;
+}
+
+div.player-table tr.values td.total
+{
+    font-size: 24px;
+    color: #DF1A56 !important ;
+}
+
+td.total i.parComparison
+{
+    font-style: normal;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    position: relative;
+    top: 3px;
+    left: 2px;
+}
+
+/* --------------------- RESULTS --------------------- */
+
+.resultsPanel
+{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 250px;
+}
+
+.resultsPanel h5
+{
+    margin: 20px auto 13px auto;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #4F595E;
+}
+
+.resultsPanel div.resultsBox
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 335px;
+    height: 370px;
+    box-shadow: 0px 0px 10px 3px #dfdfdf;
+    color: #A1AEB7;
+    padding: 5px 0px 5px 0px;
+    margin-bottom: 5px;
+}
+
+.resultsPanel div.resultsBox h4
+{
+    color: #DF1A56;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0px auto 16px auto;
+}
+
+.resultsPanel div.resultsBox h6
+{
+    font-weight: 700;
+    font-size: 18px;
+    color: #111111;
+    margin: 4px auto 6px auto;
+}
+
+.resultsPanel div.winner
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.resultsPanel span.scoreWinner
+{
+    font-size: 55px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: #DF1A56;
+}
+
+.resultsPanel span.nameWinner
+{
+    font-size: 26px;
+    font-weight: 700;
+    color: #555555;
+    position: relative;
+    top: -3px;
+}
+
+b.star
+{
+    font-size: 22px;
+    margin: 0 17px;
+}
+
+.resultsPanel div.others
+{
+    color: #555555 !important;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+.resultsPanel div.others div
+{
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 15px;
+}
+
+.resultsPanel span.scoreOther
+{
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.resultsPanel span.nameOther
+{
+    font-size: 17px;
+    font-weight: 700;
+    color: #555555;
+}
+
+/* Email */
+
+.resultsPanel p
+{
+    margin-bottom: 4px;
+    width: 335px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 15px;
+    color: #DF1A56;
+}
+
+.resultsPanel form
+{
+    width: 335px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.resultsPanel form input
+{
+    width: 80%;
+    height: 38px !important;
+    box-sizing: border-box !important;
+    font-size: 14px;
+    padding-left: 10px;
+    color: #A1AEB7;
+    border: 1px solid #C2D1D9;
+    border-radius: 1px;
+}
+
+.resultsPanel form button
+{
+    width: 30%;
+    height: 38px;
+    font-size: 12px;
+    color: white;
+    background-color: #DF1A56;
+    border: none;
+    border-radius: 1px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.resultsPanel form button:hover
+{
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: #b71948;
+}
+
+.resultsPanel form button b
+{
+    font-size: 22px;
+    position: relative;
+    left: 10px;
+    top: -1px;
+}
+
+/** Message POPUP */
+
+.background-popup
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000029;
+    z-index: 19;
+}
+
+@keyframes popupAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Apply the animation to the popup */
+.background-popup div.show {
+    display: flex; /* Show the div when the class "show" is added */
+    animation: popupAnimation 0.5s ease-in-out; /* Set the animation duration and timing function */
+}
+
+.background-popup div
+{
+    display: none;
+    width: 90%;
+    min-width: 300px;
+    max-width: 350px;
+    height: 250px;
+    background: whitesmoke;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 0px 3px 2px #cbcbcb;
+    border-radius: 4px;
+}
+
+#loading
+{
+    color: #87929a;
+    width: 275px !important;
+    height: 130px !important;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.background-popup .success-title,
+.background-popup .error-title
+{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    color: #DF1A56;
+}
+
+.background-popup .error-title
+{
+
+}
+
+.background-popup .message
+{
+    color: #555555;
+    line-height: 22px;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.close-popup
+{
+    margin-top: 35px;
+    width: 245px;
+    height: 44px;
+    border: 1px solid #DF1A56;
+    border-radius: 1px;
+    background: #DF1A56;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.close-popup:hover,
+.close-popup:active
+{
+    cursor: pointer;
+    transition: 0.2s;
+    background: #b71948;
+}
+
+/* ANIMATIONS */
+
+/* Set the initial styles for the div */
+
+/* Define the animation */
+@keyframes zoomBounceAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Apply the animation to the div */
+.resultsBox.show {
+    display: block; /* Show the div when the class "show" is added */
+    animation: zoomBounceAnimation 0.6s ease-in-out; /* Set the animation duration and timing function */
+}
+
